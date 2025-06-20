@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Stylish T‑Shirt",
+    "price": 599,
+    "image": "assets/tshirt.jpg",
+    "category": "clothing",
+    "description": "A cool and comfy t‑shirt for everyday wear."
+  },
+  {
+    "id": 2,
+    "name": "Wireless Headphones",
+    "price": 1999,
+    "image": "assets/headphones.jpg",
+    "category": "electronics",
+    "description": "Noise‑cancelling wireless headphones with long battery life."
+  },
+  {
+    "id": 3,
+    "name": "Classic Watch",
+    "price": 1499,
+    "image": "assets/watch.jpg",
+    "category": "accessories",
+    "description": "Elegant analog watch with leather strap."
+  }
+]
