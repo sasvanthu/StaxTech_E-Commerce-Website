@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My E‑Commerce Store</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+  <header class="container">
+    <h1>My E‑Commerce Store</h1>
+    <div class="search-box">
+      <input type="text" id="search" placeholder="Search products…" oninput="filterProducts()" />
+      <select id="category" onchange="filterProducts()">
+        <option value="all">All Categories</option>
+        <option value="clothing">Clothing</option>
+        <option value="electronics">Electronics</option>
+        <option value="accessories">Accessories</option>
+      </select>
+    </div>
+    <button id="cart-btn" onclick="showCart()">🛒 Cart (<span id="cart-count">0</span>)</button>
+  </header>
+
+  <!-- AUTH SECTION -->
+  <section id="auth-section" class="container">
+    <h2>Login / Sign Up</h2>
+    <input type="email" id="email" placeholder="Email" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="signup()">Sign Up</button>
+    <button onclick="login()">Login</button>
+    <button id="logout-btn" onclick="logout()" style="display:none;">Logout</button>
+    <p id="user-info"></p>
+  </section>
+
+  <!-- PRODUCT LIST -->
+  <main id="product-list" class="grid container"></main>
+
+  <!-- CART PANEL -->
+  <section id="cart" class="panel" style="display:none;">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p><strong>Total:</strong> ₹<span id="total">0</span></p>
+    <div class="cart-actions">
+      <button onclick="clearCart()">Clear Cart</button>
+      <button onclick="checkout()">Checkout</button>
+    </div>
+  </section>
+
+  <!-- PRODUCT MODAL -->
+  <div id="modal" class="modal" style="display:none;">
+    <div class="modal-content" id="modal-content"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
