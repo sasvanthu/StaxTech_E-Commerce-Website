@@ -1,17 +1,17 @@
 // ---------- Firebase Setup ----------
-// Replace the placeholder values with your own Firebase project config
-const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  const firebaseConfig = {
+  apiKey: "AIzaSyDNrD0Xq0jrtSOg1fPkrhub45JoAK3EcTM",
+  authDomain: "e-commerce-f5239.firebaseapp.com",
+  projectId: "e-commerce-f5239",
+  storageBucket: "e-commerce-f5239.firebasestorage.app",
+  messagingSenderId: "490149588210",
+  appId: "1:490149588210:web:92c6d52c3af4d4491cf46b",
+  measurementId: "G-KKB5EBX0F0"
 };
+  
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 
-// Optional Firestore for future use (cart/orders)
 const db = firebase.firestore();
 
 // ---------- Application State ----------
